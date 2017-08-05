@@ -2,13 +2,13 @@ import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * Created by zzc on 8/4/17.
  */
-public class DataDividedByUser {
+public class CoCurrenceMatrix {
     final static Logger logger = Logger.getLogger(DataDividedByUser.class);
 
     public static class DataDivideMapper extends Mapper<LongWritable, Text, IntWritable, Text> {
@@ -48,12 +48,12 @@ public class DataDividedByUser {
         String inputDataDir = args[0];
         String outputDataDir = args[1];
 
-        File output1 = new File(outputDataDir);
-        if (output1.exists()) {
+        File output2 = new File(outputDataDir);
+        if (output2.exists()) {
             if (logger.isInfoEnabled()) {
-                logger.info("Output1 directory already exits!\tDelete previous directory.");
+                logger.info("Output2 directory already exits!\tDelete previous directory.");
             }
-            FileUtils.deleteDirectory(output1);
+            FileUtils.deleteDirectory(output2);
         }
 
         Configuration conf= new Configuration();
