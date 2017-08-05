@@ -17,32 +17,38 @@ import java.io.IOException;
 /**
  * Created by zzc on 8/4/17.
  */
+
 public class CoCurrenceMatrix {
     final static Logger logger = Logger.getLogger(DataDividedByUser.class);
 
-    public static class DataDivideMapper extends Mapper<LongWritable, Text, IntWritable, Text> {
+    public static class CoCurrenceMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            String values[] = value.toString().trim().split(",");
-            int userId = Integer.parseInt(values[0]);
-            String movieId = values[1];
-            String rating = values[2];
-            context.write(new IntWritable(userId), new Text(movieId + "-" + rating));
+            String movies_ratings[] = value.toString().trim().split(",");
+
+            for (String movie_rating : movies_ratings) {
+                String movie0 = movie_rating.split("-")[0];
+                for (String movie_rating1 : movies_ratings) {
+                    String movie1 = movie_rating1.split("-")[0];
+//                    System.out.println(movie0+"-"+movie1);
+                    context.write(new Text(movie0 + "-" + movie1), new IntWritable(1));
+                }
+            }
         }
     }
 
-    public static class DataDivideReducer extends Reducer<IntWritable, Text, IntWritable, Text> {
-        @Override
-        protected void reduce(IntWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-            StringBuffer buffer = new StringBuffer();
-            for (Text value : values) {
-                buffer.append(value + ",");
-            }
-            buffer.deleteCharAt(buffer.length() - 1);
-            System.out.println(key+" : "+buffer.toString());
-            context.write(key, new Text(buffer.toString()));
-        }
-    }
+//    public static class CoCurrenceReducer extends Reducer<Text, IntWritable, IntWritable, Text> {
+//        @Override
+//        protected void reduce(IntWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+//            StringBuffer buffer = new StringBuffer();
+//            for (Text value : values) {
+//                buffer.append(value + ",");
+//            }
+//            buffer.deleteCharAt(buffer.length() - 1);
+//            System.out.println(key+" : "+buffer.toString());
+//            context.write(key, new Text(buffer.toString()));
+//        }
+//    }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         String inputDataDir = args[0];
@@ -58,12 +64,12 @@ public class CoCurrenceMatrix {
 
         Configuration conf= new Configuration();
         Job job = Job.getInstance(conf);
-        job.setMapperClass(DataDivideMapper.class);
-        job.setReducerClass(DataDivideReducer.class);
+        job.setMapperClass(CoCurrenceMapper.class);
+//        job.setReducerClass(CoCurrenceReducer.class);
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
-        job.setOutputKeyClass(IntWritable.class);
-        job.setOutputValueClass(Text.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
 
         TextInputFormat.setInputPaths(job, new Path(inputDataDir));
         TextOutputFormat.setOutputPath(job, new Path(outputDataDir));
