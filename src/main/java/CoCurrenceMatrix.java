@@ -20,7 +20,7 @@ import java.util.Iterator;
  */
 
 public class CoCurrenceMatrix {
-    final static Logger logger = Logger.getLogger(DataDividedByUser.class);
+    final static Logger logger = Logger.getLogger(CoCurrenceMatrix.class);
 
     public static class CoCurrenceMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override

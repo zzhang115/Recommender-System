@@ -20,28 +20,31 @@ import java.util.Iterator;
  */
 
 public class NormalizeMatrix {
-    final static Logger logger = Logger.getLogger(DataDividedByUser.class);
+    final static Logger logger = Logger.getLogger(NormalizeMatrix.class);
 
     public static class NormalizeMapper extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            System.out.println("key"+key+"value:"+value);
             String movies_id = value.toString().trim().split("-")[0];
+            System.out.println(movies_id);
             context.write(new Text(movies_id), value);
         }
     }
 
-    public static class NormalizeReducer extends Reducer<Text, Text, Text, IntWritable> {
-        @Override
-        protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-            System.out.println("key:"+key);
+//    public static class NormalizeReducer extends Reducer<Text, Text, Text, IntWritable> {
+//        @Override
+//        protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+//            System.out.println("key:"+key);
+//            super.(key, values, context);
 //            Iterator<Text> iterator = values.iterator();
 //            int count = 0;
 //            while (iterator.hasNext()) {
 //                count += iterator.next().get();
 //            }
 //            context.write(key, new IntWritable(count));
-        }
-    }
+//        }
+//    }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         String inputDataDir = args[0];
@@ -59,10 +62,12 @@ public class NormalizeMatrix {
         Job job = Job.getInstance(conf);
         job.setMapperClass(NormalizeMapper.class);
 //        job.setReducerClass(NormalizeReducer.class);
-        job.setInputFormatClass(TextInputFormat.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setJarByClass(NormalizeMatrix.class);
+
+//        job.setInputFormatClass(TextInputFormat.class);
+//        job.setOutputFormatClass(TextOutputFormat.class);
+//        job.setOutputKeyClass(Text.class);
+//        job.setOutputValueClass(IntWritable.class);
 
         TextInputFormat.setInputPaths(job, new Path(inputDataDir));
         TextOutputFormat.setOutputPath(job, new Path(outputDataDir));
