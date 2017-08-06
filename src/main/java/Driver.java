@@ -8,14 +8,19 @@ public class Driver {
         String rawData = args[0];
         String userMovieListOutputDir = args[1];
         String coCurrenceMatrixOutputDir = args[2];
+        String normalizeMatrixOutputDir = args[3];
 
         String[] path1 = {rawData, userMovieListOutputDir};
         String[] path2 = {userMovieListOutputDir, coCurrenceMatrixOutputDir};
+        String[] path3 = {coCurrenceMatrixOutputDir, normalizeMatrixOutputDir};
 
         DataDividedByUser dataDividedByUser = new DataDividedByUser();
         dataDividedByUser.main(path1);
 
         CoCurrenceMatrix coCurrenceMatrix = new CoCurrenceMatrix();
         coCurrenceMatrix.main(path2);
+
+        NormalizeMatrix normalizeMatrix = new NormalizeMatrix();
+        normalizeMatrix.main(path3);
     }
 }
