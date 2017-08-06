@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 
 /**
  * Created by zzc on 8/4/17.
@@ -24,31 +25,30 @@ public class CoCurrenceMatrix {
     public static class CoCurrenceMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            String movies_ratings[] = value.toString().trim().split(",");
+            String movies_ratings[] = value.toString().trim().split("\t")[1].split(",");
 
             for (String movie_rating : movies_ratings) {
                 String movie0 = movie_rating.split("-")[0];
                 for (String movie_rating1 : movies_ratings) {
                     String movie1 = movie_rating1.split("-")[0];
-//                    System.out.println(movie0+"-"+movie1);
+                    System.out.println(movie0+"-"+movie1);
                     context.write(new Text(movie0 + "-" + movie1), new IntWritable(1));
                 }
             }
         }
     }
 
-//    public static class CoCurrenceReducer extends Reducer<Text, IntWritable, IntWritable, Text> {
-//        @Override
-//        protected void reduce(IntWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-//            StringBuffer buffer = new StringBuffer();
-//            for (Text value : values) {
-//                buffer.append(value + ",");
-//            }
-//            buffer.deleteCharAt(buffer.length() - 1);
-//            System.out.println(key+" : "+buffer.toString());
-//            context.write(key, new Text(buffer.toString()));
-//        }
-//    }
+    public static class CoCurrenceReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+        @Override
+        protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+            Iterator<IntWritable> iterator = values.iterator();
+            int count = 0;
+            while (iterator.hasNext()) {
+                count += iterator.next().get();
+            }
+            context.write(key, new IntWritable(count));
+        }
+    }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         String inputDataDir = args[0];
@@ -65,7 +65,7 @@ public class CoCurrenceMatrix {
         Configuration conf= new Configuration();
         Job job = Job.getInstance(conf);
         job.setMapperClass(CoCurrenceMapper.class);
-//        job.setReducerClass(CoCurrenceReducer.class);
+        job.setReducerClass(CoCurrenceReducer.class);
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
         job.setOutputKeyClass(Text.class);
