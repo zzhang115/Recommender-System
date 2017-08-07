@@ -56,6 +56,9 @@ public class NormalizeMatrix {
 
         File output3 = new File(outputFileDir);
         if (output3.exists()) {
+            if (logger.isInfoEnabled()) {
+                logger.info("Output3 directory already exits!\tDelete previous directory.");
+            }
             FileUtils.deleteDirectory(output3);
         }
 
