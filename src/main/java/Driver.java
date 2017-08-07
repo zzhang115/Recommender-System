@@ -5,16 +5,16 @@ import java.io.IOException;
  */
 public class Driver {
     public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException {
-        String rawData = args[0];
+        String rawDataDir = args[0];
         String userMovieListOutputDir = args[1];
         String coCurrenceMatrixOutputDir = args[2];
         String normalizeMatrixOutputDir = args[3];
         String multiplicationOutputDir = args[4];
 
-        String[] path1 = {rawData, userMovieListOutputDir};
+        String[] path1 = {rawDataDir, userMovieListOutputDir};
         String[] path2 = {userMovieListOutputDir, coCurrenceMatrixOutputDir};
         String[] path3 = {coCurrenceMatrixOutputDir, normalizeMatrixOutputDir};
-        String[] path4 = {normalizeMatrixOutputDir, multiplicationOutputDir};
+        String[] path4 = {normalizeMatrixOutputDir, rawDataDir, multiplicationOutputDir};
 
         DataDividedByUser dataDividedByUser = new DataDividedByUser();
         dataDividedByUser.main(path1);

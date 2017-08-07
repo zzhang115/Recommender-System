@@ -1,6 +1,7 @@
 import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -14,31 +15,45 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by zzc on 8/6/17.
  */
+
 public class Multiplication {
     final static Logger logger = Logger.getLogger(Multiplication.class);
 
     public static class CocurrenceMapper extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-
+            String line = value.toString();
+            context.write(new Text(line.split("\t")[0]), new Text(line.split("\t")[1]));
         }
     }
 
     public static class RatingMapper extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-
+            String line = value.toString();
+            System.out.println("line:"+line);
+            context.write(new Text(line.split(",")[0]), new Text(line.split(",")[1]));
         }
     }
 
-    public static class MultiplicationReducer extends Reducer<LongWritable, Text, Text, Text> {
+    public static class MultiplicationReducer extends Reducer<LongWritable, Text, Text, DoubleWritable> {
         @Override
         protected void reduce(LongWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-
+            Map<String, Double> relationMap = new HashMap<String, Double>();
+            Map<String, Double> ratingsMap = new HashMap<String, Double>();
+            for (Text value : values) {
+                if (value.toString().contains(":")) {
+                    relationMap.put(value.toString().split(":")[0], Double.parseDouble(value.toString().split(":")[1]));
+                } else {
+                    ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
+                }
+            }
         }
     }
 
@@ -68,8 +83,9 @@ public class Multiplication {
 
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
+
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(Text.class);
+        job.setOutputValueClass(DoubleWritable.class);
 
         MultipleInputs.addInputPath(job, new Path(coCurrenceInputFileDir), TextInputFormat.class, CocurrenceMapper.class);
         MultipleInputs.addInputPath(job, new Path(ratingsInputFileDir), TextInputFormat.class, RatingMapper.class);
