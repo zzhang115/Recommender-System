@@ -42,18 +42,18 @@ public class Multiplication {
         }
     }
 
-    public static class MultiplicationReducer extends Reducer<LongWritable, Text, Text, DoubleWritable> {
+    public static class MultiplicationReducer extends Reducer<Text, Text, Text, DoubleWritable> {
         @Override
-        protected void reduce(LongWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+        protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
             Map<String, Double> relationMap = new HashMap<String, Double>();
             Map<String, Double> ratingsMap = new HashMap<String, Double>();
-            for (Text value : values) {
-                if (value.toString().contains(":")) {
-                    relationMap.put(value.toString().split(":")[0], Double.parseDouble(value.toString().split(":")[1]));
-                } else {
-                    ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
-                }
-            }
+//            for (Text value : values) {
+//                if (value.toString().contains(":")) {
+//                    relationMap.put(value.toString().split(":")[0], Double.parseDouble(value.toString().split(":")[1]));
+//                } else {
+//                    ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
+//                }
+//            }
         }
     }
 
@@ -75,7 +75,7 @@ public class Multiplication {
         job.setJarByClass(Multiplication.class);
 
         ChainMapper.addMapper(job, CocurrenceMapper.class, LongWritable.class, Text.class, Text.class, Text.class, configuration);
-        ChainMapper.addMapper(job, RatingMapper.class, LongWritable.class, Text.class, Text.class, Text.class, configuration);
+        ChainMapper.addMapper(job, RatingMapper.class, Text.class, Text.class, Text.class, Text.class, configuration);
 
         job.setMapperClass(CocurrenceMapper.class);
         job.setMapperClass(RatingMapper.class);
