@@ -38,7 +38,7 @@ public class Multiplication {
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             String line = value.toString();
             System.out.println("line:"+line);
-            context.write(new Text(line.split(",")[0]), new Text(line.split(",")[1]));
+            context.write(new Text(line.split(",")[1]), new Text(line.split(",")[0] + "," + line.split(",")[2]));
         }
     }
 
@@ -47,13 +47,15 @@ public class Multiplication {
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
             Map<String, Double> relationMap = new HashMap<String, Double>();
             Map<String, Double> ratingsMap = new HashMap<String, Double>();
-//            for (Text value : values) {
-//                if (value.toString().contains(":")) {
-//                    relationMap.put(value.toString().split(":")[0], Double.parseDouble(value.toString().split(":")[1]));
-//                } else {
-//                    ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
-//                }
-//            }
+            for (Text value : values) {
+                if (value.toString().contains(":")) {
+                    System.out.println(value.toString().split(":")[0]+"___"+Double.parseDouble(value.toString().split(":")[1]));
+                    relationMap.put(value.toString().split(":")[0], Double.parseDouble(value.toString().split(":")[1]));
+                } else {
+                    System.out.println(value.toString().split(",")[0]+",,,"+Double.parseDouble(value.toString().split(",")[1]));
+                    ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
+                }
+            }
         }
     }
 
