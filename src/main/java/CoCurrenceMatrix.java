@@ -25,13 +25,13 @@ public class CoCurrenceMatrix {
     public static class CoCurrenceMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            System.out.println("value:"+value.toString());
             String movies_ratings[] = value.toString().trim().split("\t")[1].split(",");
 
             for (String movie_rating : movies_ratings) {
                 String movie0 = movie_rating.split("-")[0];
                 for (String movie_rating1 : movies_ratings) {
                     String movie1 = movie_rating1.split("-")[0];
-                    System.out.println(movie0+"-"+movie1);
                     context.write(new Text(movie0 + "-" + movie1), new IntWritable(1));
                 }
             }
