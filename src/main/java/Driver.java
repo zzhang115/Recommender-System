@@ -9,10 +9,12 @@ public class Driver {
         String userMovieListOutputDir = args[1];
         String coCurrenceMatrixOutputDir = args[2];
         String normalizeMatrixOutputDir = args[3];
+        String multiplicationOutputDir = args[4];
 
         String[] path1 = {rawData, userMovieListOutputDir};
         String[] path2 = {userMovieListOutputDir, coCurrenceMatrixOutputDir};
         String[] path3 = {coCurrenceMatrixOutputDir, normalizeMatrixOutputDir};
+        String[] path4 = {normalizeMatrixOutputDir, multiplicationOutputDir};
 
         DataDividedByUser dataDividedByUser = new DataDividedByUser();
         dataDividedByUser.main(path1);
@@ -22,5 +24,8 @@ public class Driver {
 
         NormalizeMatrix normalizeMatrix = new NormalizeMatrix();
         normalizeMatrix.main(path3);
+
+        Multiplication multiplication = new Multiplication();
+        multiplication.main(path4);
     }
 }
