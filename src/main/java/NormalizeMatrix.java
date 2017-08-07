@@ -45,7 +45,9 @@ public class NormalizeMatrix {
                 sum += subCount;
                 map.put(movie1, subCount);
             }
-
+            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+                context.write(key, new Text(entry.getKey() + ":" + (double) entry.getValue() / sum));
+            }
         }
     }
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
@@ -67,8 +69,8 @@ public class NormalizeMatrix {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
 
-        TextInputFormat.setInputPaths(job, new Path(args[0]));
-        TextOutputFormat.setOutputPath(job, new Path(args[1]));
+        TextInputFormat.setInputPaths(job, new Path(inputFileDir));
+        TextOutputFormat.setOutputPath(job, new Path(outputFileDir));
         job.waitForCompletion(true);
     }
 }

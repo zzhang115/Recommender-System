@@ -8322,3 +8322,349 @@ java.lang.ArrayIndexOutOfBoundsException: 1
 2017-08-06 20:34:04 INFO  JobClient:589 -     FILE_BYTES_READ=8136
 2017-08-06 20:34:04 INFO  JobClient:587 -   File Output Format Counters 
 2017-08-06 20:34:04 INFO  JobClient:589 -     Bytes Written=8
+2017-08-06 20:42:16 INFO  DataDividedByUser:54 - Output1 directory already exits!	Delete previous directory.
+2017-08-06 20:42:17 WARN  NativeCodeLoader:52 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-06 20:42:17 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:42:17 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:42:17 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:42:17 WARN  LoadSnappy:46 - Snappy native library not loaded
+2017-08-06 20:42:17 INFO  JobClient:1380 - Running job: job_local381863448_0001
+2017-08-06 20:42:17 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:42:17 INFO  LocalJobRunner:204 - Starting task: attempt_local381863448_0001_m_000000_0
+2017-08-06 20:42:17 INFO  ProcessTree:63 - setsid exited with exit code 0
+2017-08-06 20:42:17 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7000df99
+2017-08-06 20:42:17 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-06 20:42:17 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:42:17 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:42:17 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:42:17 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:42:17 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:42:17 INFO  Task:858 - Task:attempt_local381863448_0001_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:17 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:17 INFO  Task:970 - Task 'attempt_local381863448_0001_m_000000_0' done.
+2017-08-06 20:42:17 INFO  LocalJobRunner:229 - Finishing task: attempt_local381863448_0001_m_000000_0
+2017-08-06 20:42:17 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:42:17 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@80bc117
+2017-08-06 20:42:17 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:17 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:42:17 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 338 bytes
+2017-08-06 20:42:17 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:17 INFO  Task:858 - Task:attempt_local381863448_0001_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:17 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:17 INFO  Task:1011 - Task attempt_local381863448_0001_r_000000_0 is allowed to commit now
+2017-08-06 20:42:17 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local381863448_0001_r_000000_0' to output1
+2017-08-06 20:42:17 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:42:17 INFO  Task:970 - Task 'attempt_local381863448_0001_r_000000_0' done.
+2017-08-06 20:42:18 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:42:18 INFO  JobClient:1448 - Job complete: job_local381863448_0001
+2017-08-06 20:42:18 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:42:18 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:42:18 INFO  JobClient:589 -     Spilled Records=42
+2017-08-06 20:42:18 INFO  JobClient:589 -     Map output materialized bytes=342
+2017-08-06 20:42:18 INFO  JobClient:589 -     Reduce input records=21
+2017-08-06 20:42:18 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     Map input records=21
+2017-08-06 20:42:18 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:42:18 INFO  JobClient:589 -     Map output bytes=294
+2017-08-06 20:42:18 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     Reduce input groups=5
+2017-08-06 20:42:18 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     Reduce output records=5
+2017-08-06 20:42:18 INFO  JobClient:589 -     Map output records=21
+2017-08-06 20:42:18 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:42:18 INFO  JobClient:589 -     Total committed heap usage (bytes)=449839104
+2017-08-06 20:42:18 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:42:18 INFO  JobClient:589 -     Bytes Read=251
+2017-08-06 20:42:18 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:42:18 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=103284
+2017-08-06 20:42:18 INFO  JobClient:589 -     FILE_BYTES_READ=1242
+2017-08-06 20:42:18 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:42:18 INFO  JobClient:589 -     Bytes Written=232
+2017-08-06 20:42:18 INFO  CoCurrenceMatrix:60 - Output2 directory already exits!	Delete previous directory.
+2017-08-06 20:42:18 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:42:18 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:42:18 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:42:18 INFO  JobClient:1380 - Running job: job_local1632480058_0002
+2017-08-06 20:42:18 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:42:18 INFO  LocalJobRunner:204 - Starting task: attempt_local1632480058_0002_m_000000_0
+2017-08-06 20:42:18 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3f42f253
+2017-08-06 20:42:18 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/part-r-00000:0+220
+2017-08-06 20:42:18 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:42:18 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:42:18 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:42:18 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:42:18 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:42:18 INFO  Task:858 - Task:attempt_local1632480058_0002_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:18 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:18 INFO  Task:970 - Task 'attempt_local1632480058_0002_m_000000_0' done.
+2017-08-06 20:42:18 INFO  LocalJobRunner:229 - Finishing task: attempt_local1632480058_0002_m_000000_0
+2017-08-06 20:42:18 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:42:18 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@712b5986
+2017-08-06 20:42:18 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:18 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:42:18 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 1676 bytes
+2017-08-06 20:42:18 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:18 INFO  Task:858 - Task:attempt_local1632480058_0002_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:18 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:18 INFO  Task:1011 - Task attempt_local1632480058_0002_r_000000_0 is allowed to commit now
+2017-08-06 20:42:18 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local1632480058_0002_r_000000_0' to output2
+2017-08-06 20:42:18 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:42:18 INFO  Task:970 - Task 'attempt_local1632480058_0002_r_000000_0' done.
+2017-08-06 20:42:19 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:42:19 INFO  JobClient:1448 - Job complete: job_local1632480058_0002
+2017-08-06 20:42:19 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:42:19 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:42:19 INFO  JobClient:589 -     Spilled Records=186
+2017-08-06 20:42:19 INFO  JobClient:589 -     Map output materialized bytes=1680
+2017-08-06 20:42:19 INFO  JobClient:589 -     Reduce input records=93
+2017-08-06 20:42:19 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     Map input records=5
+2017-08-06 20:42:19 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:42:19 INFO  JobClient:589 -     Map output bytes=1488
+2017-08-06 20:42:19 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     Reduce input groups=43
+2017-08-06 20:42:19 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     Reduce output records=43
+2017-08-06 20:42:19 INFO  JobClient:589 -     Map output records=93
+2017-08-06 20:42:19 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:42:19 INFO  JobClient:589 -     Total committed heap usage (bytes)=650117120
+2017-08-06 20:42:19 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:42:19 INFO  JobClient:589 -     Bytes Read=232
+2017-08-06 20:42:19 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:42:19 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=209826
+2017-08-06 20:42:19 INFO  JobClient:589 -     FILE_BYTES_READ=4126
+2017-08-06 20:42:19 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:42:19 INFO  JobClient:589 -     Bytes Written=618
+2017-08-06 20:42:19 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:42:19 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:42:19 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:42:19 INFO  JobClient:1380 - Running job: job_local1561460961_0003
+2017-08-06 20:42:19 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:42:19 INFO  LocalJobRunner:204 - Starting task: attempt_local1561460961_0003_m_000000_0
+2017-08-06 20:42:19 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@8b71aa2
+2017-08-06 20:42:19 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/part-r-00000:0+602
+2017-08-06 20:42:19 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:42:19 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:42:19 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:42:19 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:42:19 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:42:19 INFO  Task:858 - Task:attempt_local1561460961_0003_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:19 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:19 INFO  Task:970 - Task 'attempt_local1561460961_0003_m_000000_0' done.
+2017-08-06 20:42:19 INFO  LocalJobRunner:229 - Finishing task: attempt_local1561460961_0003_m_000000_0
+2017-08-06 20:42:19 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:42:19 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@2927dc77
+2017-08-06 20:42:19 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:19 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:42:19 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 690 bytes
+2017-08-06 20:42:19 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:19 INFO  Task:858 - Task:attempt_local1561460961_0003_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:19 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:19 INFO  Task:1011 - Task attempt_local1561460961_0003_r_000000_0 is allowed to commit now
+2017-08-06 20:42:19 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local1561460961_0003_r_000000_0' to output3
+2017-08-06 20:42:19 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:42:19 INFO  Task:970 - Task 'attempt_local1561460961_0003_r_000000_0' done.
+2017-08-06 20:42:20 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:42:20 INFO  JobClient:1448 - Job complete: job_local1561460961_0003
+2017-08-06 20:42:20 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:42:20 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:42:20 INFO  JobClient:589 -     Spilled Records=86
+2017-08-06 20:42:20 INFO  JobClient:589 -     Map output materialized bytes=694
+2017-08-06 20:42:20 INFO  JobClient:589 -     Reduce input records=43
+2017-08-06 20:42:20 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     Map input records=43
+2017-08-06 20:42:20 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:42:20 INFO  JobClient:589 -     Map output bytes=602
+2017-08-06 20:42:20 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     Reduce input groups=7
+2017-08-06 20:42:20 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     Reduce output records=43
+2017-08-06 20:42:20 INFO  JobClient:589 -     Map output records=43
+2017-08-06 20:42:20 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:42:20 INFO  JobClient:589 -     Total committed heap usage (bytes)=848297984
+2017-08-06 20:42:20 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:42:20 INFO  JobClient:589 -     Bytes Read=618
+2017-08-06 20:42:20 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:42:20 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=315204
+2017-08-06 20:42:20 INFO  JobClient:589 -     FILE_BYTES_READ=8136
+2017-08-06 20:42:20 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:42:20 INFO  JobClient:589 -     Bytes Written=1082
+2017-08-06 20:42:58 INFO  DataDividedByUser:54 - Output1 directory already exits!	Delete previous directory.
+2017-08-06 20:42:58 WARN  NativeCodeLoader:52 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-06 20:42:58 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:42:58 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:42:58 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:42:58 WARN  LoadSnappy:46 - Snappy native library not loaded
+2017-08-06 20:42:59 INFO  JobClient:1380 - Running job: job_local1216647783_0001
+2017-08-06 20:42:59 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:42:59 INFO  LocalJobRunner:204 - Starting task: attempt_local1216647783_0001_m_000000_0
+2017-08-06 20:42:59 INFO  ProcessTree:63 - setsid exited with exit code 0
+2017-08-06 20:42:59 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7000df99
+2017-08-06 20:42:59 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-06 20:42:59 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:42:59 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:42:59 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:42:59 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:42:59 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:42:59 INFO  Task:858 - Task:attempt_local1216647783_0001_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:59 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:59 INFO  Task:970 - Task 'attempt_local1216647783_0001_m_000000_0' done.
+2017-08-06 20:42:59 INFO  LocalJobRunner:229 - Finishing task: attempt_local1216647783_0001_m_000000_0
+2017-08-06 20:42:59 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:42:59 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@80bc117
+2017-08-06 20:42:59 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:59 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:42:59 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 338 bytes
+2017-08-06 20:42:59 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:59 INFO  Task:858 - Task:attempt_local1216647783_0001_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:42:59 INFO  LocalJobRunner:466 - 
+2017-08-06 20:42:59 INFO  Task:1011 - Task attempt_local1216647783_0001_r_000000_0 is allowed to commit now
+2017-08-06 20:42:59 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local1216647783_0001_r_000000_0' to output1
+2017-08-06 20:42:59 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:42:59 INFO  Task:970 - Task 'attempt_local1216647783_0001_r_000000_0' done.
+2017-08-06 20:43:00 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:43:00 INFO  JobClient:1448 - Job complete: job_local1216647783_0001
+2017-08-06 20:43:00 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:43:00 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:43:00 INFO  JobClient:589 -     Spilled Records=42
+2017-08-06 20:43:00 INFO  JobClient:589 -     Map output materialized bytes=342
+2017-08-06 20:43:00 INFO  JobClient:589 -     Reduce input records=21
+2017-08-06 20:43:00 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     Map input records=21
+2017-08-06 20:43:00 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:43:00 INFO  JobClient:589 -     Map output bytes=294
+2017-08-06 20:43:00 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     Reduce input groups=5
+2017-08-06 20:43:00 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     Reduce output records=5
+2017-08-06 20:43:00 INFO  JobClient:589 -     Map output records=21
+2017-08-06 20:43:00 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:43:00 INFO  JobClient:589 -     Total committed heap usage (bytes)=449839104
+2017-08-06 20:43:00 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:43:00 INFO  JobClient:589 -     Bytes Read=251
+2017-08-06 20:43:00 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:43:00 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=103292
+2017-08-06 20:43:00 INFO  JobClient:589 -     FILE_BYTES_READ=1242
+2017-08-06 20:43:00 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:43:00 INFO  JobClient:589 -     Bytes Written=232
+2017-08-06 20:43:00 INFO  CoCurrenceMatrix:60 - Output2 directory already exits!	Delete previous directory.
+2017-08-06 20:43:00 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:43:00 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:43:00 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:43:00 INFO  JobClient:1380 - Running job: job_local210836032_0002
+2017-08-06 20:43:00 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:43:00 INFO  LocalJobRunner:204 - Starting task: attempt_local210836032_0002_m_000000_0
+2017-08-06 20:43:00 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3f42f253
+2017-08-06 20:43:00 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/part-r-00000:0+220
+2017-08-06 20:43:00 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:43:00 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:43:00 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:43:00 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:43:00 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:43:00 INFO  Task:858 - Task:attempt_local210836032_0002_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:43:00 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:00 INFO  Task:970 - Task 'attempt_local210836032_0002_m_000000_0' done.
+2017-08-06 20:43:00 INFO  LocalJobRunner:229 - Finishing task: attempt_local210836032_0002_m_000000_0
+2017-08-06 20:43:00 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:43:00 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@712b5986
+2017-08-06 20:43:00 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:00 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:43:00 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 1676 bytes
+2017-08-06 20:43:00 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:00 INFO  Task:858 - Task:attempt_local210836032_0002_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:43:00 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:00 INFO  Task:1011 - Task attempt_local210836032_0002_r_000000_0 is allowed to commit now
+2017-08-06 20:43:00 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local210836032_0002_r_000000_0' to output2
+2017-08-06 20:43:00 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:43:00 INFO  Task:970 - Task 'attempt_local210836032_0002_r_000000_0' done.
+2017-08-06 20:43:01 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:43:01 INFO  JobClient:1448 - Job complete: job_local210836032_0002
+2017-08-06 20:43:01 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:43:01 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:43:01 INFO  JobClient:589 -     Spilled Records=186
+2017-08-06 20:43:01 INFO  JobClient:589 -     Map output materialized bytes=1680
+2017-08-06 20:43:01 INFO  JobClient:589 -     Reduce input records=93
+2017-08-06 20:43:01 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     Map input records=5
+2017-08-06 20:43:01 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:43:01 INFO  JobClient:589 -     Map output bytes=1488
+2017-08-06 20:43:01 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     Reduce input groups=43
+2017-08-06 20:43:01 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     Reduce output records=43
+2017-08-06 20:43:01 INFO  JobClient:589 -     Map output records=93
+2017-08-06 20:43:01 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:43:01 INFO  JobClient:589 -     Total committed heap usage (bytes)=650117120
+2017-08-06 20:43:01 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:43:01 INFO  JobClient:589 -     Bytes Read=232
+2017-08-06 20:43:01 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:43:01 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=209826
+2017-08-06 20:43:01 INFO  JobClient:589 -     FILE_BYTES_READ=4126
+2017-08-06 20:43:01 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:43:01 INFO  JobClient:589 -     Bytes Written=618
+2017-08-06 20:43:01 WARN  JobClient:746 - Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2017-08-06 20:43:01 WARN  JobClient:870 - No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2017-08-06 20:43:01 INFO  FileInputFormat:237 - Total input paths to process : 1
+2017-08-06 20:43:01 INFO  JobClient:1380 - Running job: job_local999311087_0003
+2017-08-06 20:43:01 INFO  LocalJobRunner:340 - Waiting for map tasks
+2017-08-06 20:43:01 INFO  LocalJobRunner:204 - Starting task: attempt_local999311087_0003_m_000000_0
+2017-08-06 20:43:01 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3def40f6
+2017-08-06 20:43:01 INFO  MapTask:729 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/part-r-00000:0+602
+2017-08-06 20:43:01 INFO  MapTask:949 - io.sort.mb = 100
+2017-08-06 20:43:01 INFO  MapTask:961 - data buffer = 79691776/99614720
+2017-08-06 20:43:01 INFO  MapTask:962 - record buffer = 262144/327680
+2017-08-06 20:43:01 INFO  MapTask:1289 - Starting flush of map output
+2017-08-06 20:43:01 INFO  MapTask:1471 - Finished spill 0
+2017-08-06 20:43:01 INFO  Task:858 - Task:attempt_local999311087_0003_m_000000_0 is done. And is in the process of commiting
+2017-08-06 20:43:01 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:01 INFO  Task:970 - Task 'attempt_local999311087_0003_m_000000_0' done.
+2017-08-06 20:43:01 INFO  LocalJobRunner:229 - Finishing task: attempt_local999311087_0003_m_000000_0
+2017-08-06 20:43:01 INFO  LocalJobRunner:348 - Map task executor complete.
+2017-08-06 20:43:01 INFO  Task:534 -  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@4c606dd6
+2017-08-06 20:43:01 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:01 INFO  Merger:408 - Merging 1 sorted segments
+2017-08-06 20:43:01 INFO  Merger:491 - Down to the last merge-pass, with 1 segments left of total size: 690 bytes
+2017-08-06 20:43:01 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:01 INFO  Task:858 - Task:attempt_local999311087_0003_r_000000_0 is done. And is in the process of commiting
+2017-08-06 20:43:01 INFO  LocalJobRunner:466 - 
+2017-08-06 20:43:01 INFO  Task:1011 - Task attempt_local999311087_0003_r_000000_0 is allowed to commit now
+2017-08-06 20:43:01 INFO  FileOutputCommitter:173 - Saved output of task 'attempt_local999311087_0003_r_000000_0' to output3
+2017-08-06 20:43:01 INFO  LocalJobRunner:466 - reduce > reduce
+2017-08-06 20:43:01 INFO  Task:970 - Task 'attempt_local999311087_0003_r_000000_0' done.
+2017-08-06 20:43:02 INFO  JobClient:1393 -  map 100% reduce 100%
+2017-08-06 20:43:02 INFO  JobClient:1448 - Job complete: job_local999311087_0003
+2017-08-06 20:43:02 INFO  JobClient:585 - Counters: 20
+2017-08-06 20:43:02 INFO  JobClient:587 -   Map-Reduce Framework
+2017-08-06 20:43:02 INFO  JobClient:589 -     Spilled Records=86
+2017-08-06 20:43:02 INFO  JobClient:589 -     Map output materialized bytes=694
+2017-08-06 20:43:02 INFO  JobClient:589 -     Reduce input records=43
+2017-08-06 20:43:02 INFO  JobClient:589 -     Virtual memory (bytes) snapshot=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     Map input records=43
+2017-08-06 20:43:02 INFO  JobClient:589 -     SPLIT_RAW_BYTES=144
+2017-08-06 20:43:02 INFO  JobClient:589 -     Map output bytes=602
+2017-08-06 20:43:02 INFO  JobClient:589 -     Reduce shuffle bytes=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     Physical memory (bytes) snapshot=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     Reduce input groups=7
+2017-08-06 20:43:02 INFO  JobClient:589 -     Combine output records=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     Reduce output records=43
+2017-08-06 20:43:02 INFO  JobClient:589 -     Map output records=43
+2017-08-06 20:43:02 INFO  JobClient:589 -     Combine input records=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     CPU time spent (ms)=0
+2017-08-06 20:43:02 INFO  JobClient:589 -     Total committed heap usage (bytes)=848297984
+2017-08-06 20:43:02 INFO  JobClient:587 -   File Input Format Counters 
+2017-08-06 20:43:02 INFO  JobClient:589 -     Bytes Read=618
+2017-08-06 20:43:02 INFO  JobClient:587 -   FileSystemCounters
+2017-08-06 20:43:02 INFO  JobClient:589 -     FILE_BYTES_WRITTEN=315239
+2017-08-06 20:43:02 INFO  JobClient:589 -     FILE_BYTES_READ=8136
+2017-08-06 20:43:02 INFO  JobClient:587 -   File Output Format Counters 
+2017-08-06 20:43:02 INFO  JobClient:589 -     Bytes Written=1125
