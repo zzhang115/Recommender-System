@@ -47,6 +47,7 @@ public class Multiplication {
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
             Map<String, Double> relationMap = new HashMap<String, Double>();
             Map<String, Double> ratingsMap = new HashMap<String, Double>();
+            System.out.println("multiply");
             for (Text value : values) {
                 if (value.toString().contains(":")) {
                     System.out.println(value.toString().split(":")[0]+"___"+Double.parseDouble(value.toString().split(":")[1]));
@@ -54,6 +55,16 @@ public class Multiplication {
                 } else {
                     System.out.println(value.toString().split(",")[0]+",,,"+Double.parseDouble(value.toString().split(",")[1]));
                     ratingsMap.put(value.toString().split(",")[0], Double.parseDouble(value.toString().split(",")[1]));
+                }
+            }
+            for (Map.Entry<String, Double> entry : relationMap.entrySet()) {
+                String movie = entry.getKey();
+                Double relation = entry.getValue();
+                for (Map.Entry<String, Double> entry1 : ratingsMap.entrySet()) {
+                    String userId = entry1.getKey();
+                    Double rating = entry1.getValue();
+                    context.write(new Text(userId + ":" + movie), new DoubleWritable(relation * rating));
+                    System.out.println(userId + ":" + movie+"relation:"+relation + "rating:"+rating + relation * rating);
                 }
             }
         }

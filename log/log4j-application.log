@@ -11397,3 +11397,665 @@ java.lang.ArrayIndexOutOfBoundsException: 1
 		Bytes Read=0
 	File Output Format Counters 
 		Bytes Written=8
+2017-08-07 22:06:30 INFO  DataDividedByUser:54 - Output1 directory already exits!	Delete previous directory.
+2017-08-07 22:06:31 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-07 22:06:31 INFO  deprecation:1173 - session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-08-07 22:06:31 INFO  JvmMetrics:76 - Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-08-07 22:06:31 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:06:31 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:06:31 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:06:31 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:06:32 INFO  JobSubmitter:477 - Submitting tokens for job: job_local561113506_0001
+2017-08-07 22:06:32 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:06:32 INFO  Job:1317 - Running job: job_local561113506_0001
+2017-08-07 22:06:32 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:06:32 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:06:32 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:06:32 INFO  LocalJobRunner:216 - Starting task: attempt_local561113506_0001_m_000000_0
+2017-08-07 22:06:32 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:32 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-07 22:06:32 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:06:32 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:06:32 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:06:32 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:06:32 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:06:32 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:06:32 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:32 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:06:32 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:06:32 INFO  MapTask:1460 - bufstart = 0; bufend = 294; bufvoid = 104857600
+2017-08-07 22:06:32 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214316(104857264); length = 81/6553600
+2017-08-07 22:06:32 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:06:32 INFO  Task:995 - Task:attempt_local561113506_0001_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:32 INFO  LocalJobRunner:513 - map
+2017-08-07 22:06:32 INFO  Task:1115 - Task 'attempt_local561113506_0001_m_000000_0' done.
+2017-08-07 22:06:32 INFO  LocalJobRunner:241 - Finishing task: attempt_local561113506_0001_m_000000_0
+2017-08-07 22:06:32 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:06:32 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:32 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:06:32 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 332 bytes
+2017-08-07 22:06:32 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:32 INFO  deprecation:1173 - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2017-08-07 22:06:32 INFO  Task:995 - Task:attempt_local561113506_0001_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:32 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:32 INFO  Task:1156 - Task attempt_local561113506_0001_r_000000_0 is allowed to commit now
+2017-08-07 22:06:32 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local561113506_0001_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/_temporary/0/task_local561113506_0001_r_000000
+2017-08-07 22:06:32 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:06:32 INFO  Task:1115 - Task 'attempt_local561113506_0001_r_000000_0' done.
+2017-08-07 22:06:33 INFO  Job:1338 - Job job_local561113506_0001 running in uber mode : false
+2017-08-07 22:06:33 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:06:33 INFO  Job:1356 - Job job_local561113506_0001 completed successfully
+2017-08-07 22:06:33 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=1242
+		FILE: Number of bytes written=402310
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=21
+		Map output records=21
+		Map output bytes=294
+		Map output materialized bytes=342
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=0
+		Reduce input records=21
+		Reduce output records=5
+		Spilled Records=42
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=460324864
+	File Input Format Counters 
+		Bytes Read=251
+	File Output Format Counters 
+		Bytes Written=232
+2017-08-07 22:06:33 INFO  CoCurrenceMatrix:60 - Output2 directory already exits!	Delete previous directory.
+2017-08-07 22:06:33 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:06:33 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:06:33 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:06:33 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:06:33 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:06:33 INFO  JobSubmitter:477 - Submitting tokens for job: job_local702557369_0002
+2017-08-07 22:06:33 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:06:33 INFO  Job:1317 - Running job: job_local702557369_0002
+2017-08-07 22:06:33 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:06:33 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:06:33 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:06:33 INFO  LocalJobRunner:216 - Starting task: attempt_local702557369_0002_m_000000_0
+2017-08-07 22:06:33 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:33 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/part-r-00000:0+220
+2017-08-07 22:06:33 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:06:33 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:06:33 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:06:33 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:06:33 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:06:33 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:06:33 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:33 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:06:33 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:06:33 INFO  MapTask:1460 - bufstart = 0; bufend = 1488; bufvoid = 104857600
+2017-08-07 22:06:33 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214028(104856112); length = 369/6553600
+2017-08-07 22:06:33 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:06:33 INFO  Task:995 - Task:attempt_local702557369_0002_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:33 INFO  LocalJobRunner:513 - map
+2017-08-07 22:06:33 INFO  Task:1115 - Task 'attempt_local702557369_0002_m_000000_0' done.
+2017-08-07 22:06:33 INFO  LocalJobRunner:241 - Finishing task: attempt_local702557369_0002_m_000000_0
+2017-08-07 22:06:33 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:06:33 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:33 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:06:33 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 1662 bytes
+2017-08-07 22:06:33 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:33 INFO  Task:995 - Task:attempt_local702557369_0002_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:33 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:33 INFO  Task:1156 - Task attempt_local702557369_0002_r_000000_0 is allowed to commit now
+2017-08-07 22:06:33 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local702557369_0002_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/_temporary/0/task_local702557369_0002_r_000000
+2017-08-07 22:06:33 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:06:33 INFO  Task:1115 - Task 'attempt_local702557369_0002_r_000000_0' done.
+2017-08-07 22:06:34 INFO  Job:1338 - Job job_local702557369_0002 running in uber mode : false
+2017-08-07 22:06:34 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:06:34 INFO  Job:1356 - Job job_local702557369_0002 completed successfully
+2017-08-07 22:06:34 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=4142
+		FILE: Number of bytes written=807870
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=5
+		Map output records=93
+		Map output bytes=1488
+		Map output materialized bytes=1680
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=43
+		Reduce shuffle bytes=0
+		Reduce input records=93
+		Reduce output records=43
+		Spilled Records=186
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=736100352
+	File Input Format Counters 
+		Bytes Read=240
+	File Output Format Counters 
+		Bytes Written=618
+2017-08-07 22:06:34 INFO  NormalizeMatrix:60 - Output3 directory already exits!	Delete previous directory.
+2017-08-07 22:06:34 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:06:34 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:06:34 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:06:34 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:06:34 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:06:34 INFO  JobSubmitter:477 - Submitting tokens for job: job_local1946367203_0003
+2017-08-07 22:06:34 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:06:34 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:06:34 INFO  Job:1317 - Running job: job_local1946367203_0003
+2017-08-07 22:06:34 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:06:34 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:06:34 INFO  LocalJobRunner:216 - Starting task: attempt_local1946367203_0003_m_000000_0
+2017-08-07 22:06:34 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:34 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/part-r-00000:0+602
+2017-08-07 22:06:34 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:06:34 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:06:34 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:06:34 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:06:34 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:06:34 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:06:34 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:34 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:06:34 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:06:34 INFO  MapTask:1460 - bufstart = 0; bufend = 602; bufvoid = 104857600
+2017-08-07 22:06:34 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214228(104856912); length = 169/6553600
+2017-08-07 22:06:34 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:06:34 INFO  Task:995 - Task:attempt_local1946367203_0003_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:34 INFO  LocalJobRunner:513 - map
+2017-08-07 22:06:34 INFO  Task:1115 - Task 'attempt_local1946367203_0003_m_000000_0' done.
+2017-08-07 22:06:34 INFO  LocalJobRunner:241 - Finishing task: attempt_local1946367203_0003_m_000000_0
+2017-08-07 22:06:34 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:06:34 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:34 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:06:34 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 682 bytes
+2017-08-07 22:06:34 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:34 INFO  Task:995 - Task:attempt_local1946367203_0003_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:34 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:34 INFO  Task:1156 - Task attempt_local1946367203_0003_r_000000_0 is allowed to commit now
+2017-08-07 22:06:34 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local1946367203_0003_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output3/_temporary/0/task_local1946367203_0003_r_000000
+2017-08-07 22:06:34 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:06:34 INFO  Task:1115 - Task 'attempt_local1946367203_0003_r_000000_0' done.
+2017-08-07 22:06:35 INFO  Job:1338 - Job job_local1946367203_0003 running in uber mode : false
+2017-08-07 22:06:35 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:06:35 INFO  Job:1356 - Job job_local1946367203_0003 completed successfully
+2017-08-07 22:06:35 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=8168
+		FILE: Number of bytes written=1214509
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=43
+		Map output records=43
+		Map output bytes=602
+		Map output materialized bytes=694
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=7
+		Reduce shuffle bytes=0
+		Reduce input records=43
+		Reduce output records=43
+		Spilled Records=86
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=946864128
+	File Input Format Counters 
+		Bytes Read=626
+	File Output Format Counters 
+		Bytes Written=1125
+2017-08-07 22:06:35 INFO  Multiplication:71 - Output4 directory already exits!	Delete previous directory.
+2017-08-07 22:06:35 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:06:35 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:06:35 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:06:35 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:06:35 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:06:35 INFO  JobSubmitter:394 - number of splits:2
+2017-08-07 22:06:35 INFO  JobSubmitter:477 - Submitting tokens for job: job_local1927380462_0004
+2017-08-07 22:06:35 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:06:35 INFO  Job:1317 - Running job: job_local1927380462_0004
+2017-08-07 22:06:35 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:06:35 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:06:35 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:06:35 INFO  LocalJobRunner:216 - Starting task: attempt_local1927380462_0004_m_000000_0
+2017-08-07 22:06:35 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:35 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output3/part-r-00000:0+1105
+2017-08-07 22:06:35 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:06:35 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:06:35 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:06:35 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:06:35 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:06:35 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:36 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:06:36 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:06:36 INFO  MapTask:1460 - bufstart = 0; bufend = 1105; bufvoid = 104857600
+2017-08-07 22:06:36 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214228(104856912); length = 169/6553600
+2017-08-07 22:06:36 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:06:36 INFO  Task:995 - Task:attempt_local1927380462_0004_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - map
+2017-08-07 22:06:36 INFO  Task:1115 - Task 'attempt_local1927380462_0004_m_000000_0' done.
+2017-08-07 22:06:36 INFO  LocalJobRunner:241 - Finishing task: attempt_local1927380462_0004_m_000000_0
+2017-08-07 22:06:36 INFO  LocalJobRunner:216 - Starting task: attempt_local1927380462_0004_m_000001_0
+2017-08-07 22:06:36 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:36 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-07 22:06:36 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:06:36 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:06:36 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:06:36 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:06:36 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:06:36 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:36 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:06:36 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:06:36 INFO  MapTask:1460 - bufstart = 0; bufend = 252; bufvoid = 104857600
+2017-08-07 22:06:36 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214316(104857264); length = 81/6553600
+2017-08-07 22:06:36 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:06:36 INFO  Task:995 - Task:attempt_local1927380462_0004_m_000001_0 is done. And is in the process of committing
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - map
+2017-08-07 22:06:36 INFO  Task:1115 - Task 'attempt_local1927380462_0004_m_000001_0' done.
+2017-08-07 22:06:36 INFO  LocalJobRunner:241 - Finishing task: attempt_local1927380462_0004_m_000001_0
+2017-08-07 22:06:36 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:06:36 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:06:36 INFO  Merger:568 - Merging 2 sorted segments
+2017-08-07 22:06:36 INFO  Merger:667 - Down to the last merge-pass, with 2 segments left of total size: 1473 bytes
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:36 INFO  Task:995 - Task:attempt_local1927380462_0004_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - 
+2017-08-07 22:06:36 INFO  Task:1156 - Task attempt_local1927380462_0004_r_000000_0 is allowed to commit now
+2017-08-07 22:06:36 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local1927380462_0004_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output4/_temporary/0/task_local1927380462_0004_r_000000
+2017-08-07 22:06:36 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:06:36 INFO  Task:1115 - Task 'attempt_local1927380462_0004_r_000000_0' done.
+2017-08-07 22:06:36 INFO  Job:1338 - Job job_local1927380462_0004 running in uber mode : false
+2017-08-07 22:06:36 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:06:36 INFO  Job:1356 - Job job_local1927380462_0004 completed successfully
+2017-08-07 22:06:36 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=21795
+		FILE: Number of bytes written=3230898
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=64
+		Map output records=64
+		Map output bytes=1357
+		Map output materialized bytes=1497
+		Input split bytes=566
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=7
+		Reduce shuffle bytes=0
+		Reduce input records=64
+		Reduce output records=0
+		Spilled Records=128
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=1940914176
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=8
+2017-08-07 22:13:39 INFO  DataDividedByUser:54 - Output1 directory already exits!	Delete previous directory.
+2017-08-07 22:13:40 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-08-07 22:13:40 INFO  deprecation:1173 - session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-08-07 22:13:40 INFO  JvmMetrics:76 - Initializing JVM Metrics with processName=JobTracker, sessionId=
+2017-08-07 22:13:40 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:13:40 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:13:40 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:13:41 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:13:41 INFO  JobSubmitter:477 - Submitting tokens for job: job_local1732820991_0001
+2017-08-07 22:13:41 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:13:41 INFO  Job:1317 - Running job: job_local1732820991_0001
+2017-08-07 22:13:41 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:13:41 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:13:41 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:13:41 INFO  LocalJobRunner:216 - Starting task: attempt_local1732820991_0001_m_000000_0
+2017-08-07 22:13:41 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:41 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-07 22:13:41 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:13:41 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:13:41 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:13:41 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:13:41 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:13:41 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:13:41 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:41 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:13:41 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:13:41 INFO  MapTask:1460 - bufstart = 0; bufend = 294; bufvoid = 104857600
+2017-08-07 22:13:41 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214316(104857264); length = 81/6553600
+2017-08-07 22:13:41 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:13:41 INFO  Task:995 - Task:attempt_local1732820991_0001_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:41 INFO  LocalJobRunner:513 - map
+2017-08-07 22:13:41 INFO  Task:1115 - Task 'attempt_local1732820991_0001_m_000000_0' done.
+2017-08-07 22:13:41 INFO  LocalJobRunner:241 - Finishing task: attempt_local1732820991_0001_m_000000_0
+2017-08-07 22:13:41 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:13:41 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:41 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:13:41 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 332 bytes
+2017-08-07 22:13:41 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:41 INFO  deprecation:1173 - mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2017-08-07 22:13:41 INFO  Task:995 - Task:attempt_local1732820991_0001_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:41 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:41 INFO  Task:1156 - Task attempt_local1732820991_0001_r_000000_0 is allowed to commit now
+2017-08-07 22:13:41 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local1732820991_0001_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/_temporary/0/task_local1732820991_0001_r_000000
+2017-08-07 22:13:41 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:13:41 INFO  Task:1115 - Task 'attempt_local1732820991_0001_r_000000_0' done.
+2017-08-07 22:13:42 INFO  Job:1338 - Job job_local1732820991_0001 running in uber mode : false
+2017-08-07 22:13:42 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:13:42 INFO  Job:1356 - Job job_local1732820991_0001 completed successfully
+2017-08-07 22:13:42 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=1242
+		FILE: Number of bytes written=404510
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=21
+		Map output records=21
+		Map output bytes=294
+		Map output materialized bytes=342
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=5
+		Reduce shuffle bytes=0
+		Reduce input records=21
+		Reduce output records=5
+		Spilled Records=42
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=460324864
+	File Input Format Counters 
+		Bytes Read=251
+	File Output Format Counters 
+		Bytes Written=232
+2017-08-07 22:13:42 INFO  CoCurrenceMatrix:60 - Output2 directory already exits!	Delete previous directory.
+2017-08-07 22:13:42 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:13:42 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:13:42 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:13:42 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:13:42 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:13:42 INFO  JobSubmitter:477 - Submitting tokens for job: job_local430190357_0002
+2017-08-07 22:13:42 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:13:42 INFO  Job:1317 - Running job: job_local430190357_0002
+2017-08-07 22:13:42 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:13:42 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:13:42 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:13:42 INFO  LocalJobRunner:216 - Starting task: attempt_local430190357_0002_m_000000_0
+2017-08-07 22:13:42 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:42 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output1/part-r-00000:0+220
+2017-08-07 22:13:42 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:13:42 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:13:42 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:13:42 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:13:42 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:13:42 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:13:42 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:42 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:13:42 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:13:42 INFO  MapTask:1460 - bufstart = 0; bufend = 1488; bufvoid = 104857600
+2017-08-07 22:13:42 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214028(104856112); length = 369/6553600
+2017-08-07 22:13:42 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:13:42 INFO  Task:995 - Task:attempt_local430190357_0002_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:42 INFO  LocalJobRunner:513 - map
+2017-08-07 22:13:42 INFO  Task:1115 - Task 'attempt_local430190357_0002_m_000000_0' done.
+2017-08-07 22:13:42 INFO  LocalJobRunner:241 - Finishing task: attempt_local430190357_0002_m_000000_0
+2017-08-07 22:13:42 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:13:42 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:42 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:13:42 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 1662 bytes
+2017-08-07 22:13:42 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:42 INFO  Task:995 - Task:attempt_local430190357_0002_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:42 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:42 INFO  Task:1156 - Task attempt_local430190357_0002_r_000000_0 is allowed to commit now
+2017-08-07 22:13:42 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local430190357_0002_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/_temporary/0/task_local430190357_0002_r_000000
+2017-08-07 22:13:42 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:13:42 INFO  Task:1115 - Task 'attempt_local430190357_0002_r_000000_0' done.
+2017-08-07 22:13:43 INFO  Job:1338 - Job job_local430190357_0002 running in uber mode : false
+2017-08-07 22:13:43 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:13:43 INFO  Job:1356 - Job job_local430190357_0002 completed successfully
+2017-08-07 22:13:43 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=4142
+		FILE: Number of bytes written=810070
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=5
+		Map output records=93
+		Map output bytes=1488
+		Map output materialized bytes=1680
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=43
+		Reduce shuffle bytes=0
+		Reduce input records=93
+		Reduce output records=43
+		Spilled Records=186
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=736100352
+	File Input Format Counters 
+		Bytes Read=240
+	File Output Format Counters 
+		Bytes Written=618
+2017-08-07 22:13:43 INFO  NormalizeMatrix:60 - Output3 directory already exits!	Delete previous directory.
+2017-08-07 22:13:43 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:13:43 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:13:43 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:13:43 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:13:43 INFO  JobSubmitter:394 - number of splits:1
+2017-08-07 22:13:43 INFO  JobSubmitter:477 - Submitting tokens for job: job_local110436521_0003
+2017-08-07 22:13:43 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:13:43 INFO  Job:1317 - Running job: job_local110436521_0003
+2017-08-07 22:13:43 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:13:43 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:13:43 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:13:43 INFO  LocalJobRunner:216 - Starting task: attempt_local110436521_0003_m_000000_0
+2017-08-07 22:13:43 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:43 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output2/part-r-00000:0+602
+2017-08-07 22:13:43 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:13:43 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:13:43 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:13:43 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:13:43 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:13:43 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:13:43 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:43 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:13:43 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:13:43 INFO  MapTask:1460 - bufstart = 0; bufend = 602; bufvoid = 104857600
+2017-08-07 22:13:43 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214228(104856912); length = 169/6553600
+2017-08-07 22:13:43 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:13:43 INFO  Task:995 - Task:attempt_local110436521_0003_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:43 INFO  LocalJobRunner:513 - map
+2017-08-07 22:13:43 INFO  Task:1115 - Task 'attempt_local110436521_0003_m_000000_0' done.
+2017-08-07 22:13:43 INFO  LocalJobRunner:241 - Finishing task: attempt_local110436521_0003_m_000000_0
+2017-08-07 22:13:43 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:13:43 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:43 INFO  Merger:568 - Merging 1 sorted segments
+2017-08-07 22:13:43 INFO  Merger:667 - Down to the last merge-pass, with 1 segments left of total size: 682 bytes
+2017-08-07 22:13:43 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:43 INFO  Task:995 - Task:attempt_local110436521_0003_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:43 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:43 INFO  Task:1156 - Task attempt_local110436521_0003_r_000000_0 is allowed to commit now
+2017-08-07 22:13:43 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local110436521_0003_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output3/_temporary/0/task_local110436521_0003_r_000000
+2017-08-07 22:13:43 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:13:43 INFO  Task:1115 - Task 'attempt_local110436521_0003_r_000000_0' done.
+2017-08-07 22:13:44 INFO  Job:1338 - Job job_local110436521_0003 running in uber mode : false
+2017-08-07 22:13:44 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:13:44 INFO  Job:1356 - Job job_local110436521_0003 completed successfully
+2017-08-07 22:13:44 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=8168
+		FILE: Number of bytes written=1214509
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=43
+		Map output records=43
+		Map output bytes=602
+		Map output materialized bytes=694
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=7
+		Reduce shuffle bytes=0
+		Reduce input records=43
+		Reduce output records=43
+		Spilled Records=86
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=946864128
+	File Input Format Counters 
+		Bytes Read=626
+	File Output Format Counters 
+		Bytes Written=1125
+2017-08-07 22:13:44 INFO  Multiplication:81 - Output4 directory already exits!	Delete previous directory.
+2017-08-07 22:13:44 INFO  JvmMetrics:71 - Cannot initialize JVM Metrics with processName=JobTracker, sessionId= - already initialized
+2017-08-07 22:13:44 WARN  JobSubmitter:149 - Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2017-08-07 22:13:44 WARN  JobSubmitter:258 - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-08-07 22:13:44 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:13:44 INFO  FileInputFormat:287 - Total input paths to process : 1
+2017-08-07 22:13:44 INFO  JobSubmitter:394 - number of splits:2
+2017-08-07 22:13:44 INFO  JobSubmitter:477 - Submitting tokens for job: job_local564409066_0004
+2017-08-07 22:13:45 INFO  Job:1272 - The url to track the job: http://localhost:8080/
+2017-08-07 22:13:45 INFO  Job:1317 - Running job: job_local564409066_0004
+2017-08-07 22:13:45 INFO  LocalJobRunner:323 - OutputCommitter set in config null
+2017-08-07 22:13:45 INFO  LocalJobRunner:341 - OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-08-07 22:13:45 INFO  LocalJobRunner:389 - Waiting for map tasks
+2017-08-07 22:13:45 INFO  LocalJobRunner:216 - Starting task: attempt_local564409066_0004_m_000000_0
+2017-08-07 22:13:45 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:45 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output3/part-r-00000:0+1105
+2017-08-07 22:13:45 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:13:45 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:13:45 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:13:45 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:13:45 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:13:45 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:45 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:13:45 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:13:45 INFO  MapTask:1460 - bufstart = 0; bufend = 1105; bufvoid = 104857600
+2017-08-07 22:13:45 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214228(104856912); length = 169/6553600
+2017-08-07 22:13:45 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:13:45 INFO  Task:995 - Task:attempt_local564409066_0004_m_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - map
+2017-08-07 22:13:45 INFO  Task:1115 - Task 'attempt_local564409066_0004_m_000000_0' done.
+2017-08-07 22:13:45 INFO  LocalJobRunner:241 - Finishing task: attempt_local564409066_0004_m_000000_0
+2017-08-07 22:13:45 INFO  LocalJobRunner:216 - Starting task: attempt_local564409066_0004_m_000001_0
+2017-08-07 22:13:45 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:45 INFO  MapTask:732 - Processing split: file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/input/userRating.txt:0+251
+2017-08-07 22:13:45 INFO  MapTask:387 - Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-08-07 22:13:45 INFO  MapTask:1183 - (EQUATOR) 0 kvi 26214396(104857584)
+2017-08-07 22:13:45 INFO  MapTask:975 - mapreduce.task.io.sort.mb: 100
+2017-08-07 22:13:45 INFO  MapTask:976 - soft limit at 83886080
+2017-08-07 22:13:45 INFO  MapTask:977 - bufstart = 0; bufvoid = 104857600
+2017-08-07 22:13:45 INFO  MapTask:978 - kvstart = 26214396; length = 6553600
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:45 INFO  MapTask:1440 - Starting flush of map output
+2017-08-07 22:13:45 INFO  MapTask:1459 - Spilling map output
+2017-08-07 22:13:45 INFO  MapTask:1460 - bufstart = 0; bufend = 252; bufvoid = 104857600
+2017-08-07 22:13:45 INFO  MapTask:1462 - kvstart = 26214396(104857584); kvend = 26214316(104857264); length = 81/6553600
+2017-08-07 22:13:45 INFO  MapTask:1648 - Finished spill 0
+2017-08-07 22:13:45 INFO  Task:995 - Task:attempt_local564409066_0004_m_000001_0 is done. And is in the process of committing
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - map
+2017-08-07 22:13:45 INFO  Task:1115 - Task 'attempt_local564409066_0004_m_000001_0' done.
+2017-08-07 22:13:45 INFO  LocalJobRunner:241 - Finishing task: attempt_local564409066_0004_m_000001_0
+2017-08-07 22:13:45 INFO  LocalJobRunner:397 - Map task executor complete.
+2017-08-07 22:13:45 INFO  Task:581 -  Using ResourceCalculatorProcessTree : [ ]
+2017-08-07 22:13:45 INFO  Merger:568 - Merging 2 sorted segments
+2017-08-07 22:13:45 INFO  Merger:667 - Down to the last merge-pass, with 2 segments left of total size: 1473 bytes
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:45 INFO  Task:995 - Task:attempt_local564409066_0004_r_000000_0 is done. And is in the process of committing
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - 
+2017-08-07 22:13:45 INFO  Task:1156 - Task attempt_local564409066_0004_r_000000_0 is allowed to commit now
+2017-08-07 22:13:45 INFO  FileOutputCommitter:439 - Saved output of task 'attempt_local564409066_0004_r_000000_0' to file:/home/zzc/NewSpace/IntelljWorkPlace/RecommenderSystem/output4/_temporary/0/task_local564409066_0004_r_000000
+2017-08-07 22:13:45 INFO  LocalJobRunner:513 - reduce > reduce
+2017-08-07 22:13:45 INFO  Task:1115 - Task 'attempt_local564409066_0004_r_000000_0' done.
+2017-08-07 22:13:46 INFO  Job:1338 - Job job_local564409066_0004 running in uber mode : false
+2017-08-07 22:13:46 INFO  Job:1345 -  map 100% reduce 100%
+2017-08-07 22:13:46 INFO  Job:1356 - Job job_local564409066_0004 completed successfully
+2017-08-07 22:13:46 INFO  Job:1363 - Counters: 27
+	File System Counters
+		FILE: Number of bytes read=21795
+		FILE: Number of bytes written=3230837
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=64
+		Map output records=64
+		Map output bytes=1357
+		Map output materialized bytes=1497
+		Input split bytes=566
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=7
+		Reduce shuffle bytes=0
+		Reduce input records=64
+		Reduce output records=135
+		Spilled Records=128
+		Shuffled Maps =0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=0
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=1947205632
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=3283
